@@ -11,11 +11,11 @@ main()
 int bt[20], wt[20], tat[20], i, n;
 float wtavg, tatavg;
 clrscr();
-printf("\nEnter the number of processes -- ");
+printf("\nEnter the number of processes ");
 scanf("%d", &n);
 for(i=0;i<n;i++)
 {
-printf("\nEnter Burst Time for Process %d -- ", i);
+printf("\nEnter Burst Time for Process %d ", i);
 scanf("%d", &bt[i]);
 }
 wt[0] = wtavg = 0;
@@ -28,7 +28,7 @@ tat[i] = tat[i-1] +bt[i];
 wtavg = wtavg + wt[i];
 tatavg = tatavg + tat[i];
 }
-printf("\t PROCESS \tBURST TIME \t WAITING TIME\t TURNAROUND TIME\n");
+printf("\t Process \tbrust time \t Waiting time\t turnaround time\n");
 for(i=0;i<n;i++)
 printf("\n\t P%d \t\t %d \t\t %d \t\t %d", i, bt[i], wt[i], tat[i]);
 printf("\nAverage Waiting Time -- %f", wtavg/n);
